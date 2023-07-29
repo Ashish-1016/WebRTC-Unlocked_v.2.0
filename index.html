@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>WebRTC - v1.0</title>
+  </head>
+  <body class="bg-white/80 min-h-screen m-10 text-black text-2xl">
+    <div class="flex flex-col justify-center">
+      <h1 class="text-3xl font-bold m-10">
+        Hello This is WebRTC - v1.0
+      </h1>
+      <div class="border-[3px] border-black flex-col md:flex">
+            <video
+            class="object-cover border-[2px] rounded-md border-yellow-800"
+            id="user1"
+            autoplay
+            playsinline
+          ></video>
+
+            <video
+            class="object-cover border border-yellow-800"
+            id="user2"
+            autoplay
+            playsinline
+          ></video>
+      </div>
+      <div class="flex m-10 bg-blue-300 max-w-5xl rounded-md shadow-md" id="create-offer-div">
+        <button class="bg-blue-600 max-w-sm m-10 rounded-md p-8 text-white font-semibold " id="create-offer">Create Offer</button>
+        <textarea class=" flex-grow border-[3px] max-w-5xl m-10 bg-white/60 text-gray-600 border-black" id="offer-sdp"></textarea>
+      </div>
+      <div class="flex m-10 bg-green-300 max-w-5xl rounded-md shadow-md" id="create-answer-div">
+        <button class="bg-green-600 max-w-sm m-10 rounded-md p-8 text-white font-semibold " id="create-answer">Create Answer</button>
+        <textarea class="flex-grow border-[3px] max-w-5xl m-10 bg-white/60 text-gray-600 border-black" id="answer-sdp"></textarea>
+      </div>
+      
+      <button class="max-w-sm m-10 rounded-lg p-8 h-24 bg-purple-600 text-white font-bold text-3xl" id='add-answer'>Add answer</button>
+    
+  </body>
+  <script src="/main.js"></script>
+</html>
